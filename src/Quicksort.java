@@ -1,6 +1,6 @@
 public class Quicksort {
     public static int pivotIdx(int arr[], int low, int high){
-        int pivot = high; // took last element as the pivot
+        int pivot = arr[high]; // took last element as the pivot
         int i= low-1;     //this is to manage the new positions
         for(int j=low; j<high; j++){
             if(arr[j]<pivot){
@@ -31,9 +31,13 @@ public class Quicksort {
 
     public static void main(String[] args) {
         int arr[]= {2,4,2,1,0,34,-1};
-        for(int i=0; i<arr.length; i++){
-            System.out.println(arr[i]);
+        int n = arr.length;
+
+        quickSort(arr,0,n-1);
+        for(int i=0; i<n; i++){
+            System.out.print(arr[i]+ " ");
         }
+        System.out.println();
 
     }
 }
