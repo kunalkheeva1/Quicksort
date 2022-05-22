@@ -17,8 +17,16 @@ public class Quicksort {
         return i;               //Now i wil have updated index of the pivot
     }
 
+    //Creating a method to perform sorting and which will require the pivot position, and now dealing with the rest of the elements
 
-
+    public static void quickSort(int[]arr, int low, int high){
+        if(low<high){
+            int pivot = pivotIdx(arr,low, high);
+            //recurrsively calling the quicksort to get the remaining positions
+            quickSort(arr,low, pivot-1);
+            quickSort(arr,pivot+1, high);
+        }
+    }
 
 
     public static void main(String[] args) {
