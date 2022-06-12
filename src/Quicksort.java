@@ -29,9 +29,9 @@ public class Quicksort {
 
         //lets make a recursivecall, it is for left half first, as my first index will be same lowIndex,
 
-        quickSort(arr, lowIndex,leftPointer);
+        quickSort(arr, lowIndex,leftPointer-1);
         //now for the right half of the array
-        quickSort(arr, leftPointer,highIndex);
+        quickSort(arr, leftPointer+1,highIndex);
 
     }
     //creating a swap method to swap the elements of an array.
