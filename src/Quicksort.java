@@ -55,10 +55,15 @@ public class Quicksort {
         System.out.println();
     }
 
+    //now lets do method overloading when I am just gonna give only array as the parameter
+    public static void quickSort(int [] arr){
+        quickSort(arr,0,arr.length-1);
+    }
+
     public static void main(String[] args) {
         //testing
         int[]arr= {3,4,2,0,84,4,9,6,7};
-
+        printArr(arr);
         quickSort(arr,0,arr.length-1);
         printArr(arr);
 
