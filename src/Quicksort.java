@@ -4,11 +4,14 @@ public class Quicksort {
     public static void quickSort(int [] arr, int lowIndex, int highIndex){
         //here i will take a pivot position and then two pointer for the rest of the array
         //one on the right side of the pivot and another on the left side of it
+        int pivot = arr[highIndex];
+        int leftPointer= lowIndex;
+        int rightPointer = highIndex;
 
-    int pivot = arr[highIndex];
-    int leftPointer= lowIndex;
-    int rightPointer = highIndex;
-
+    //giving it a condition, which means it only has one value
+        if(lowIndex>=highIndex){
+            return;
+        }
         //now traverse with the pointers wrt the pivot position
         while(lowIndex<highIndex){
             // traversing the left side, and incrementing towards the rightPointer until the condition matches
