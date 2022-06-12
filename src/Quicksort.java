@@ -25,6 +25,14 @@ public class Quicksort {
         //now if the pointers are meeting at some level then just swap it with the high index which is pivot
         swap(arr,leftPointer, highIndex);
 
+        //since the first swap happened wrt to the conditions
+
+        //lets make a recursivecall, it is for left half first, as my first index will be same lowIndex,
+
+        quickSort(arr, lowIndex,leftPointer);
+        //now for the right half of the array
+        quickSort(arr, leftPointer,highIndex);
+
     }
     //creating a swap method to swap the elements of an array.
     public static void swap(int[] arr, int index1, int index2 ){
