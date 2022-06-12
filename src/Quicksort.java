@@ -64,7 +64,7 @@ public class Quicksort {
         //testing
         int[]arr= {3,4,2,0,84,4,9,6,7};
         printArr(arr);
-        quickSort(arr,0,arr.length-1);
+        quickSort(arr);
         printArr(arr);
 
 
